@@ -273,4 +273,6 @@ public interface DataCalc {
 
 //this function will considers the period as no matter how long you give    
     public List<JEVisSample> derivation(JEVisAttribute myAtt1, int period) throws ParseException, JEVisException;
+
+    public List<JEVisSample> differentialCumulativeConverter(JEVisAttribute myAtt1) throws JEVisException;
 }
