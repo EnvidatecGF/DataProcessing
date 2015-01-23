@@ -109,7 +109,7 @@ public interface DataCalc {
      * @param deviation_s allowable deviation time and it's units second. 
      * @return
      */
-    public List<JEVisSample> intervalAlignment(JEVisAttribute attribute, int period_s, int deviation_s) throws JEVisException;
+    public List<JEVisSample> intervalAlignment(JEVisAttribute attribute, DateTime begin_time, int period_s, int deviation_s) throws JEVisException;
 
     /*
      * interpolation the whole data row, from begin to end
