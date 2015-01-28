@@ -251,28 +251,28 @@ public interface DataCalc {
     public double valueMinimum(List<JEVisAttribute> attributes,double value) throws JEVisException;
     
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public List<JEVisSample> multiplication(JEVisAttribute f1, JEVisAttribute f2) throws ParseException, JEVisException;
+    public List<JEVisSample> multiplication(List<JEVisSample> samples1, List<JEVisSample> samples2) throws ParseException, JEVisException;
     
-    public List<JEVisSample> division(JEVisAttribute myAtt1, JEVisAttribute myAtt2) throws ParseException, JEVisException;
-    
-
-    public double getAverageValue(JEVisAttribute myAtt1) throws JEVisException;
+    public List<JEVisSample> division(List<JEVisSample> samples1, List<JEVisSample> samples2) throws ParseException, JEVisException;
     
 
-    public double getMaxValue(JEVisAttribute myAtt1) throws JEVisException;
+    public double getAverageValue(List<JEVisSample> samples) throws JEVisException;
+    
+
+    public double getMaxValue(List<JEVisSample> samples) throws JEVisException;
     
 
 //calculate the Mean Deviation    
-    public double meanDeviation(JEVisAttribute myAtt1) throws JEVisException;
+    public double meanDeviation(List<JEVisSample> samples) throws JEVisException;
     
 //add shifttime to original timeaxis
-    public List<JEVisSample> addShiftTime(JEVisAttribute myAtt1, int shiftTime) throws ParseException, JEVisException;
+    public List<JEVisSample> addShiftTime(List<JEVisSample> samples, int shiftTime) throws ParseException, JEVisException;
      
 //only the value which smaller than setNumber can be stored  
-    public List<JEVisSample> lowPassFilter(JEVisAttribute myAtt1, double setNumber) throws ParseException, JEVisException;
+    public List<JEVisSample> lowPassFilter(List<JEVisSample> samples, double setNumber) throws ParseException, JEVisException;
 
 //this function will considers the period as no matter how long you give    
-    public List<JEVisSample> derivation(JEVisAttribute myAtt1, int period) throws ParseException, JEVisException;
+    public List<JEVisSample> derivation(List<JEVisSample> samples, int period) throws ParseException, JEVisException;
 
-    public List<JEVisSample> differentialCumulativeConverter(JEVisAttribute myAtt1) throws JEVisException;
+    public List<JEVisSample> differentialCumulativeConverter(List<JEVisSample> samples) throws JEVisException;
 }
