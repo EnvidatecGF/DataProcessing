@@ -166,7 +166,7 @@ public interface DataCalc {
      * @param seg_num means, how many time points will one sampled time point will be splitted into.(seg_num=1,one point becomes two points; seg_num=2,one point becomes three points; ......)
      * @return
      */
-    public List<JEVisSample> splitValues(List<JEVisSample> samples, int period_s, int seg_num) throws JEVisException;
+    public List<JEVisSample> splitValues(List<JEVisSample> samples, int period_s, int seg_num, Boolean forwardbackward) throws JEVisException;
     
     /*
     every value of the data row minus one value
