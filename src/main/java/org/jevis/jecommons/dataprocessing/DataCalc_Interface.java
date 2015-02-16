@@ -15,7 +15,7 @@ import org.joda.time.DateTime;
  *
  * @author gf
  */
-public interface DataCalc {
+public interface DataCalc_Interface {
     
     /*
      * @param samples one sampled data row of typ JEVisAttribute to be calculated
